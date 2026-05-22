@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>肌育サロン toliko | 鹿屋の隠れ家プライベートサロン</title>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;700&family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --ivory: #fcfaf8;
+            --greige: #8c7b75;
+            --gold: #c5a059;
+            --bg-overlay: rgba(40, 35, 30, 0.4);
+        }
+        body { margin: 0; background-color: var(--ivory); color: #555; font-family: 'Shippori Mincho', serif; line-height: 1.8; }
+        .hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; overflow: hidden; color: white; text-align: center; }
+        .hero video { position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto; z-index: -1; transform: translate(-50%, -50%); object-fit: cover; }
+        .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: var(--bg-overlay); z-index: 0; }
+        .hero-content { z-index: 1; }
+        .hero h1 { font-size: 3rem; letter-spacing: 0.2em; margin-bottom: 10px; }
+        .catchphrase { font-size: 1.2rem; }
+        .btn { margin-top: 30px; padding: 15px 40px; border: 1px solid var(--gold); color: var(--gold); text-decoration: none; border-radius: 5px; transition: 0.5s; }
+        .btn:hover { background: var(--gold); color: white; }
+        section { padding: 80px 20px; text-align: center; max-width: 800px; margin: 0 auto; }
+        h2 { color: var(--greige); font-size: 2rem; margin-bottom: 40px; border-bottom: 1px solid var(--gold); display: inline-block; padding: 0 20px; }
+        .menu-list { text-align: left; max-width: 600px; margin: 0 auto; }
+        .menu-category { font-weight: bold; color: var(--greige); margin-top: 30px; border-bottom: 1px solid #e4dcd6; }
+        .menu-item { display: flex; justify-content: space-between; padding: 10px 0; font-size: 0.95rem; }
+        .price { color: var(--greige); font-weight: bold; }
+        .gallery-container { text-align: center; margin-top: 20px; }
+        .gallery-container img { width: 100%; max-width: 600px; height: auto; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .fade-in { opacity: 0; transform: translateY(30px); transition: 1.2s; }
+        .fade-in.active { opacity: 1; transform: translateY(0); }
+        .insta-fixed-btn { position: fixed; bottom: 30px; right: 30px; width: 120px; height: 120px; background: white; color: var(--greige); border: 1px solid var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 0.75rem; font-weight: bold; box-shadow: 0 4px 10px rgba(0,0,0,0.15); z-index: 9999; transition: transform 0.3s ease; }
+        .insta-fixed-btn:hover { transform: scale(1.1); }
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <video autoplay muted loop playsinline>
+            <source src="toliko2.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>toliko</h1>
+            <p class="catchphrase">日常から少し離れる、<br>私だけの癒やし時間</p>
+            <a href="https://line.me/R/ti/p/..." class="btn">LINEで予約・相談する</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="fade-in">
+            <h2>About</h2>
+            <p>完全個室・女性専用のプライベートサロン。<br>木目と間接照明が織りなす空間で、心と身体を整える特別なひとときを。</p>
+        </section>
+        <section id="menu" class="fade-in">
+            <h2>Menu</h2>
+            <div class="menu-list">
+                <div class="menu-category">Facial</div>
+                <div class="menu-item"><span>マーメイドセルトリートメント (60分)</span><span class="price">¥13,000</span></div>
+                <div class="menu-item"><span>ハイドロスプラッシュプレミアム (60分)</span><span class="price">¥8,000</span></div>
+                <div class="menu-category">Body</div>
+                <div class="menu-item"><span>全身オイルマッサージ (90分)</span><span class="price">¥8,000</span></div>
+                <div class="menu-category">Eyelash</div>
+                <div class="menu-item"><span>まつ毛パーマ</span><span class="price">¥4,000</span></div>
+            </div>
+        </section>
+        <section id="gallery" class="fade-in">
+            <h2>Gallery</h2>
+            <div class="gallery-container">
+                <img src="salon-bed.jpg" alt="サロン内装・ベッド">
+            </div>
+        </section>
+    </main>
+
+    <a href="https://www.instagram.com/hadaiku_toliko" class="insta-fixed-btn" target="_blank" rel="noopener noreferrer">Instagram</a>
+
+    <script>
+        window.addEventListener("scroll", () => {
+            document.querySelectorAll('.fade-in').forEach(el => {
+                if (el.getBoundingClientRect().top < window.innerHeight * 0.8) {
+                    el.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
