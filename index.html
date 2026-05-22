@@ -32,7 +32,9 @@
         .gallery-container img { width: 100%; max-width: 600px; height: auto; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
         .fade-in { opacity: 0; transform: translateY(30px); transition: 1.2s; }
         .fade-in.active { opacity: 1; transform: translateY(0); }
-        .insta-fixed-btn { position: fixed; bottom: 30px; right: 30px; width: 120px; height: 120px; background: white; color: var(--greige); border: 1px solid var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 0.75rem; font-weight: bold; box-shadow: 0 4px 10px rgba(0,0,0,0.15); z-index: 9999; transition: transform 0.3s ease; }
+        .insta-fixed-btn { position: fixed; bottom: 30px; right: 20px; width: 80px; height: 80px; background: white; color: var(--greige); border: 1px solid var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 0.7rem; font-weight: bold; box-shadow: 0 4px 10px rgba(0,0,0,0.15); z-index: 9999; transition: transform 0.3s ease; }.insta-fixed-btn:hover {transform: scale(1.1);}
+@media (max-width: 600px) {
+        .insta-fixed-btn{width: 40px!important;;height: 40px!important;;font-size: 0.6rem!important;;bottom: 20px;right: 20px;}}
         .insta-fixed-btn:hover { transform: scale(1.1); }
     </style>
 </head>
@@ -45,7 +47,7 @@
         <div class="hero-content">
             <h1>toliko</h1>
             <p class="catchphrase">日常から少し離れる、<br>私だけの癒やし時間</p>
-            <a href="https://line.me/R/ti/p/..." class="btn">LINEで予約・相談する</a>
+            <a href="https://lin.ee/W2u6ntw" class="btn">LINEで予約・相談する</a>
         </div>
     </header>
 
@@ -58,12 +60,28 @@
             <h2>Menu</h2>
             <div class="menu-list">
                 <div class="menu-category">Facial</div>
-                <div class="menu-item"><span>マーメイドセルトリートメント (60分)</span><span class="price">¥13,000</span></div>
+                <div class="menu-item"><span>マーメイドセルトリートメント (60分)</span><span class="price">¥13,000 初回¥10,000</span></div>
                 <div class="menu-item"><span>ハイドロスプラッシュプレミアム (60分)</span><span class="price">¥8,000</span></div>
                 <div class="menu-category">Body</div>
-                <div class="menu-item"><span>全身オイルマッサージ (90分)</span><span class="price">¥8,000</span></div>
+                <div class="menu-item"><span>全身オイルマッサージ (90分)</span><span class="price">¥8,000 次回予約¥500 off</span></div>
+                <div class="menu-category"></div>
+                <div class="menu-item"><span>よもぎ蒸し　1回(30分)</span><span class="price">30分　¥3,500</span></div>
+                <div class="menu-category"></div>
+                <div class="menu-item"><span>よもぎ蒸　　次回予約</span><span class="price">     　¥3,000</span></div>
+                <div class="menu-category"></div>
+                <div class="menu-item"><span>フェイシャルORボディとセット</span><span class="price">¥2,000</span></div>
+                <div class="menu-category"></div>
+                <div class="menu-item"><span>健美草よもぎ蒸し</span><span class="price">上記料金+500</span></div>
                 <div class="menu-category">Eyelash</div>
                 <div class="menu-item"><span>まつ毛パーマ</span><span class="price">¥4,000</span></div>
+                <div class="menu-category"></div>
+                <div class="menu-item"><span>アイシャンプー</span><span class="price">¥500</span></div>
+                <div class="menu-category">Head</div>
+                <div class="menu-item"><span>極上ヘッドマッサージ</span><span class="price">40分　¥4,000</span></div>
+                
+
+
+
             </div>
         </section>
         <section id="gallery" class="fade-in">
