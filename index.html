@@ -36,6 +36,19 @@
 @media (max-width: 600px) {
         .insta-fixed-btn{width:70px!important;;height:70px!important;;font-size: 0.6rem!important;;bottom: 20px;right: 20px;}}
         .insta-fixed-btn:hover { transform: scale(1.1); }
+
+        /* スマホ向けメニュー調整 */
+        @media (max-width: 600px) {
+            .menu-item {
+                flex-direction: column;
+                align-items: flex-start;
+                margin-bottom: 10px;
+            }
+            .price {
+                margin-top: 2px;
+                font-size: 0.85rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -67,7 +80,7 @@
                 <div class="menu-category"></div>
                 <div class="menu-item"><span>よもぎ蒸し　1回(30分)</span><span class="price">30分　¥3,500</span></div>
                 <div class="menu-category"></div>
-                <div class="menu-item"><span>よもぎ蒸　　次回予約</span><span class="price">     　¥3,000</span></div>
+                <div class="menu-item"><span>よもぎ蒸　　次回予約</span><span class="price">　　¥3,000</span></div>
                 <div class="menu-category"></div>
                 <div class="menu-item"><span>フェイシャルORボディとセット</span><span class="price">¥2,000</span></div>
                 <div class="menu-category"></div>
