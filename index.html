@@ -1,116 +1,503 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>肌育サロン toliko | 鹿屋の隠れ家プライベートサロン</title>
-    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;700&family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet">
-    
-    <style>
-        :root {
-            --ivory: #fcfaf8;
-            --greige: #8c7b75;
-            --gold: #c5a059;
-            --bg-overlay: rgba(40, 35, 30, 0.4);
-        }
-        body { margin: 0; background-color: var(--ivory); color: #555; font-family: 'Shippori Mincho', serif; line-height: 1.8; }
-        .hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; overflow: hidden; color: white; text-align: center; }
-        .hero video { position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto; z-index: -1; transform: translate(-50%, -50%); object-fit: cover; }
-        .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: var(--bg-overlay); z-index: 0; }
-        .hero-content { z-index: 1; }
-        .hero h1 { font-size: 3rem; letter-spacing: 0.2em; margin-bottom: 10px; }
-        .catchphrase { font-size: 1.2rem; }
-        .btn { margin-top: 30px; padding: 15px 40px; border: 1px solid var(--gold); color: var(--gold); text-decoration: none; border-radius: 5px; transition: 0.5s; }
-        .btn:hover { background: var(--gold); color: white; }
-        section { padding: 80px 20px; text-align: center; max-width: 800px; margin: 0 auto; }
-        h2 { color: var(--greige); font-size: 2rem; margin-bottom: 40px; border-bottom: 1px solid var(--gold); display: inline-block; padding: 0 20px; }
-        .menu-list { text-align: left; max-width: 600px; margin: 0 auto; }
-        .menu-category { font-weight: bold; color: var(--greige); margin-top: 30px; border-bottom: 1px solid #e4dcd6; }
-        .menu-item { display: flex; justify-content: space-between; padding: 10px 0; font-size: 0.95rem; }
-        .price { color: var(--greige); font-weight: bold; }
-        .gallery-container { text-align: center; margin-top: 20px; }
-        .gallery-container img { width: 100%; max-width: 600px; height: auto; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-        .fade-in { opacity: 0; transform: translateY(30px); transition: 1.2s; }
-        .fade-in.active { opacity: 1; transform: translateY(0); }
-        .insta-fixed-btn { position: fixed; bottom: 30px; right: 20px; width: 80px; height: 80px; background: white; color: var(--greige); border: 1px solid var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 0.7rem; font-weight: bold; box-shadow: 0 4px 10px rgba(0,0,0,0.15); z-index: 9999; transition: transform 0.3s ease; }.insta-fixed-btn:hover {transform: scale(1.1);}
-@media (max-width: 600px) {
-        .insta-fixed-btn{width:70px!important;;height:70px!important;;font-size: 0.6rem!important;;bottom: 20px;right: 20px;}}
-        .insta-fixed-btn:hover { transform: scale(1.1); }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>鹿屋 エステ｜完全個室の肌育サロン toliko｜マーメイドセル</title>
+<meta name="description" content="鹿屋市の完全個室・女性専用エステ。肌の土台から育てる肌育サロン toliko。美容歴13年のオーナーが、おひとりずつ丁寧に。マーメイドセル初回体験 ¥10,000。">
+<meta property="og:title" content="鹿屋 完全個室の肌育サロン toliko">
+<meta property="og:description" content="いい化粧品なのに、なぜか変わらない。その答えは、肌の“土台”でした。鹿屋・完全個室の肌育サロン。">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FAF7F2;--cream-2:#F4EEE5;--beige:#E8DED0;
+    --rose:#C9A99E;--rose-deep:#A87E70;--ink:#4A4039;--muted:#8C7F73;--gold:#B8A07E;
+    --line-green:#06C755;
+    --serif:"Shippori Mincho B1", serif;--sans:"Noto Sans JP", sans-serif;
+    --maxw:680px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans);font-weight:300;color:var(--ink);background:var(--cream);
+    line-height:1.95;letter-spacing:.04em;font-size:15px;-webkit-font-smoothing:antialiased;
+    overflow-x:hidden;padding-bottom:76px;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px}
+  section{padding:74px 0}
+  .eyebrow{font-family:var(--serif);font-size:12px;letter-spacing:.34em;color:var(--gold);text-transform:uppercase;display:block;margin-bottom:18px}
+  h2.title{font-family:var(--serif);font-weight:500;font-size:25px;line-height:1.7;letter-spacing:.06em;margin-bottom:26px}
+  .fade{opacity:0;transform:translateY(22px);transition:opacity 1s ease, transform 1s ease}
+  .fade.in{opacity:1;transform:none}
 
-        /* スマホ向けメニュー調整 */
-        @media (max-width: 600px) {
-            .menu-item {
-                flex-direction: column;
-                align-items: flex-start;
-                margin-bottom: 10px;
-            }
-            .price {
-                margin-top: 2px;
-                font-size: 0.85rem;
-            }
-        }
-    </style>
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;min-height:96vh;display:flex;flex-direction:column;justify-content:flex-end;
+    background-image:url("images/hero.jpg");
+    background-size:cover;background-position:center 35%;overflow:hidden;
+  }
+  .hero::before{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(to bottom,
+      rgba(250,247,242,.12) 0%,
+      rgba(250,247,242,0) 26%,
+      rgba(74,64,57,0) 48%,
+      rgba(60,50,44,.42) 78%,
+      rgba(52,43,38,.66) 100%);
+  }
+  .hero-inner{position:relative;padding:0 26px 54px;max-width:var(--maxw);margin:0 auto;width:100%}
+  .hero h1{font-family:var(--serif);font-weight:500;font-size:31px;line-height:1.82;letter-spacing:.04em;color:#fff;text-shadow:0 2px 14px rgba(52,43,38,.5)}
+  .hero h1 .accent{background:linear-gradient(transparent 62%, rgba(201,169,158,.55) 62%);padding:0 .08em}
+  .hero .sub{margin-top:20px;font-size:14px;color:#fdf8f1;line-height:2;font-weight:400;text-shadow:0 1px 10px rgba(52,43,38,.55)}
+  .badges{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px}
+  .badge{font-family:var(--serif);font-size:11.5px;letter-spacing:.12em;color:#fff;background:rgba(168,126,112,.62);border:1px solid rgba(255,255,255,.55);border-radius:40px;padding:7px 15px;backdrop-filter:blur(2px)}
+  .hero-cta{margin-top:28px}
+
+  /* ---------- buttons ---------- */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--sans);font-weight:500;font-size:15px;letter-spacing:.06em;border-radius:46px;padding:16px 30px;width:100%;max-width:360px;text-decoration:none;border:none;cursor:pointer;transition:transform .2s ease,opacity .2s ease}
+  .btn:active{transform:scale(.985)}
+  .btn-line{background:var(--line-green);color:#fff;box-shadow:0 8px 22px rgba(6,199,85,.32)}
+  .btn-line:hover{opacity:.93}
+  .btn-ig{background:transparent;color:var(--rose-deep);border:1px solid var(--rose);max-width:360px;margin-top:12px;font-weight:400}
+  .btn .ic{width:18px;height:18px;flex:0 0 auto}
+  .cta-note{font-size:11.5px;color:#fbeee2;margin-top:12px;letter-spacing:.06em;text-align:center;max-width:360px;text-shadow:0 1px 8px rgba(52,43,38,.5)}
+  section .cta-note{color:var(--muted);text-shadow:none}
+
+  /* ---------- checklist ---------- */
+  .checklist{background:var(--cream-2)}
+  .check{display:flex;gap:14px;align-items:flex-start;padding:17px 0;border-bottom:1px solid var(--beige)}
+  .check:last-of-type{border-bottom:none}
+  .check .mk{flex:0 0 auto;width:23px;height:23px;border-radius:50%;border:1.5px solid var(--rose);color:var(--rose-deep);display:flex;align-items:center;justify-content:center;font-size:12px;margin-top:3px}
+  .check p{font-size:14.5px;line-height:1.8}
+  .check-foot{font-family:var(--serif);font-size:15px;text-align:center;margin-top:30px;color:var(--rose-deep);line-height:1.9}
+
+  /* ---------- cause ---------- */
+  .cause .lead{font-family:var(--serif);font-size:20px;line-height:1.95;margin-bottom:22px}
+  .cause p{font-size:14.5px;color:#574c43;margin-bottom:16px}
+  .cause .foundation{margin:34px 0 6px;text-align:center;font-family:var(--serif);font-size:17px;color:var(--rose-deep);line-height:2}
+  .term{font-size:12px;color:var(--muted);text-align:center;margin-top:4px}
+
+  /* ---------- promises ---------- */
+  .promises{background:var(--beige)}
+  .promise{background:var(--cream);border-radius:4px;padding:26px 24px;margin-bottom:16px;border:1px solid #ded2c1}
+  .promise:nth-child(odd){margin-left:10px}
+  .promise:nth-child(even){margin-right:10px}
+  .promise .no{font-family:var(--serif);font-size:13px;color:var(--gold);letter-spacing:.2em}
+  .promise h3{font-family:var(--serif);font-weight:500;font-size:18px;margin:8px 0 9px}
+  .promise p{font-size:13.5px;color:#5d5249;line-height:1.85}
+
+  /* ---------- owner ---------- */
+  .owner{background:var(--cream)}
+  .owner-photo{width:100%;border-radius:5px;margin-bottom:30px;display:block;border:1px solid var(--beige)}
+  .owner .greet{font-family:var(--serif);font-size:20px;line-height:1.8;margin-bottom:24px}
+  .owner .greet b{font-weight:600}
+  .owner p{font-size:14.5px;color:#574c43;margin-bottom:18px}
+  .owner p b{font-weight:500;color:var(--ink)}
+  .name-origin{margin:32px -8px;padding:34px 26px;background:linear-gradient(180deg,#F4EEE5,#EFE5D8);border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);text-align:center}
+  .name-origin .l{font-family:var(--serif);font-size:17px;line-height:2.1;color:var(--rose-deep)}
+  .name-origin .toliko{font-family:var(--serif);font-size:30px;letter-spacing:.16em;color:var(--ink);margin:14px 0 6px;display:block}
+  .name-origin .toliko span{font-size:14px;color:var(--muted);letter-spacing:.05em}
+  .owner .sign{font-family:var(--serif);text-align:right;margin-top:24px;font-size:15px;color:var(--muted)}
+  .owner .sign b{font-size:19px;color:var(--ink);font-weight:500;letter-spacing:.08em}
+  .owner .prof{margin-top:22px;font-size:12.5px;color:var(--muted);background:var(--cream-2);border-radius:4px;padding:16px 18px;line-height:1.95}
+
+  /* ---------- flow ---------- */
+  .flow{background:var(--cream-2)}
+  .flow-imgs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:30px}
+  .flow-imgs img{width:100%;height:170px;object-fit:cover;border-radius:5px;border:1px solid var(--beige)}
+  .step{display:flex;gap:18px;padding:18px 0;align-items:flex-start}
+  .step .n{flex:0 0 auto;width:34px;height:34px;border-radius:50%;background:var(--cream);border:1px solid var(--rose);font-family:var(--serif);color:var(--rose-deep);font-size:14px;display:flex;align-items:center;justify-content:center}
+  .step .c h4{font-family:var(--serif);font-weight:500;font-size:16px;margin-bottom:4px}
+  .step .c p{font-size:13px;color:#5d5249;line-height:1.8}
+  .flow-note{font-size:13px;color:var(--rose-deep);text-align:center;margin-top:22px;font-family:var(--serif)}
+
+  /* ---------- voices ---------- */
+  .voice{background:var(--cream);border:1px solid var(--beige);border-radius:4px;padding:22px 22px;margin-bottom:15px;position:relative}
+  .voice .q{font-family:var(--serif);font-size:34px;color:var(--rose);line-height:1;position:absolute;top:12px;left:16px;opacity:.5}
+  .voice p{font-size:14px;line-height:1.9;padding-top:14px}
+  .voice .who{font-size:12px;color:var(--muted);margin-top:12px;letter-spacing:.08em}
+  .voice-disclaimer{font-size:11px;color:var(--muted);text-align:center;margin-top:8px}
+
+  /* ---------- menu ---------- */
+  .menu{background:var(--beige)}
+  .trial-lead{text-align:center;font-family:var(--serif);font-size:15px;color:var(--rose-deep);margin-bottom:28px;line-height:1.9}
+  .tier{background:var(--cream);border:1px solid #dccfbd;border-radius:5px;overflow:hidden;margin-bottom:15px;position:relative}
+  .tier.feature{border:1.5px solid var(--rose);box-shadow:0 8px 24px rgba(168,126,112,.14)}
+  .tier .ribbon{position:absolute;top:14px;left:14px;z-index:2;background:var(--rose-deep);color:#fff;font-size:11px;letter-spacing:.12em;padding:5px 16px;border-radius:30px;white-space:nowrap;font-family:var(--serif)}
+  .tier-img{width:100%;height:180px;object-fit:cover;display:block}
+  .tier-body{padding:22px}
+  .tier .kind{font-family:var(--serif);font-size:12px;color:var(--gold);letter-spacing:.18em}
+  .tier h3{font-family:var(--serif);font-weight:500;font-size:19px;margin:7px 0 4px}
+  .tier .min{font-size:12px;color:var(--muted)}
+  .tier .price{font-family:var(--serif);font-size:24px;margin:12px 0 4px;color:var(--ink)}
+  .tier .price .was{font-size:13px;color:var(--muted);text-decoration:line-through;margin-left:8px;font-family:var(--sans)}
+  .tier .desc{font-size:13px;color:#5d5249;line-height:1.8;margin-top:8px}
+  .tier .tier-cta{display:inline-flex;margin-top:16px;font-size:13px;color:var(--rose-deep);border:1px solid var(--rose);border-radius:40px;padding:9px 22px;text-decoration:none;letter-spacing:.06em}
+
+  .tier .fhook{font-family:var(--serif);font-size:15px;color:var(--rose-deep);line-height:1.7;margin:8px 0 6px}
+  .tier .price .min2{font-size:12px;color:var(--muted);font-family:var(--sans);margin-left:8px}
+  .trial-note{font-size:12px;color:var(--muted);text-align:center;margin-top:18px;line-height:1.8}
+  .menu-sub{font-family:var(--serif);font-size:16px;color:var(--ink);margin:42px 0 18px;text-align:center;letter-spacing:.08em}
+  .fcard{display:flex;gap:0;background:var(--cream);border:1px solid #dccfbd;border-radius:6px;overflow:hidden;margin-bottom:14px}
+  .fcard>img{width:108px;flex:0 0 auto;object-fit:cover;align-self:stretch}
+  .fcard .fbody{padding:16px 18px;flex:1;min-width:0}
+  .fcard .fhook{font-family:var(--serif);font-size:13.5px;color:var(--rose-deep);line-height:1.65;margin-bottom:5px}
+  .fcard h4{font-family:var(--serif);font-weight:500;font-size:16px;margin-bottom:6px}
+  .fcard .fdesc{font-size:12.5px;color:#5d5249;line-height:1.75;margin-bottom:11px}
+  .fcard .fprice{font-family:var(--serif);font-size:17px;color:var(--ink)}
+  .fcard .fprice .init{font-family:var(--sans);font-size:11px;color:#fff;background:var(--rose-deep);border-radius:20px;padding:3px 10px;margin-left:8px;letter-spacing:.03em;vertical-align:middle}
+  .fcard .fprice .min2{font-size:11px;color:var(--muted);font-family:var(--sans);margin-left:8px}
+  .mrow{display:flex;gap:14px;padding:14px 2px;border-bottom:1px solid #d9cdbb;align-items:center}
+  .mrow:last-child{border-bottom:none}
+  .mthumb{flex:0 0 auto;width:62px;height:62px;object-fit:cover;border-radius:6px;border:1px solid #d9cdbb}
+  .mrow .mbody{flex:1;display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+  .mrow .mname{font-size:14px}
+  .mrow .mname small{display:block;color:var(--muted);font-size:11.5px;margin-top:3px;line-height:1.6}
+  .mrow .mprice{font-family:var(--serif);font-size:15px;white-space:nowrap;text-align:right}
+  .mrow .mprice small{display:block;font-size:11px;color:var(--muted)}
+
+  .yomogi{margin-top:30px;background:var(--cream);border:1px solid #dccfbd;border-radius:5px;padding:22px}
+  .yomogi .tag{display:inline-block;font-family:var(--serif);font-size:11.5px;color:#fff;background:var(--gold);border-radius:30px;padding:4px 14px;letter-spacing:.12em;margin-bottom:10px}
+  .yomogi h3{font-family:var(--serif);font-weight:500;font-size:17px;margin-bottom:4px}
+  .yomogi .desc{font-size:13px;color:#5d5249;line-height:1.8;margin:8px 0 14px}
+  .yomogi .y-prices{font-size:12.5px;color:var(--muted);line-height:1.9}
+  .yomogi .y-prices b{color:var(--ink);font-family:var(--serif);font-weight:500}
+
+  /* ---------- faq ---------- */
+  .faq details{border-bottom:1px solid var(--beige);padding:4px 0}
+  .faq summary{list-style:none;cursor:pointer;padding:16px 36px 16px 4px;position:relative;font-size:14.5px;font-weight:400}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::before{content:"Q";font-family:var(--serif);color:var(--rose-deep);margin-right:12px;font-size:14px}
+  .faq summary::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);color:var(--rose-deep);font-size:20px;transition:transform .3s ease;font-weight:300}
+  .faq details[open] summary::after{transform:translateY(-50%) rotate(45deg)}
+  .faq .a{padding:0 6px 18px 28px;font-size:13.5px;color:#5d5249;line-height:1.85}
+
+  /* ---------- access ---------- */
+  .access{background:var(--cream-2)}
+  .info-row{display:flex;gap:16px;padding:13px 0;border-bottom:1px solid var(--beige);font-size:14px}
+  .info-row:last-child{border-bottom:none}
+  .info-row .k{flex:0 0 92px;color:var(--muted);font-family:var(--serif);letter-spacing:.08em}
+  .info-row .v{flex:1}
+  .access-note{font-size:12px;color:var(--muted);margin-top:18px;line-height:1.8;background:var(--cream);border-radius:4px;padding:14px 16px}
+
+  /* ---------- final cta ---------- */
+  .final{background:linear-gradient(180deg,#EFE5D8,#E8DED0);text-align:center}
+  .final h2{font-family:var(--serif);font-weight:500;font-size:23px;line-height:1.8;margin-bottom:10px}
+  .final p{font-size:14px;color:#574c43;margin-bottom:28px}
+  .final .btn{margin-left:auto;margin-right:auto}
+  .final .cta-note{margin-left:auto;margin-right:auto;color:var(--muted)}
+
+  footer{background:var(--ink);color:#cdbfae;text-align:center;padding:40px 26px;font-size:11.5px;line-height:2}
+  footer .flogo{font-family:var(--serif);font-size:18px;letter-spacing:.26em;color:#f0e7d8;margin-bottom:14px}
+  footer .disc{font-size:10.5px;color:#9c8e7d;margin-top:18px;line-height:1.8}
+
+  /* ---------- sticky ---------- */
+  .sticky{position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(250,247,242,.95);backdrop-filter:blur(8px);border-top:1px solid var(--beige);padding:11px 16px;display:flex;gap:10px;box-shadow:0 -4px 18px rgba(74,64,57,.08)}
+  .sticky a{flex:1;display:flex;align-items:center;justify-content:center;gap:7px;text-decoration:none;border-radius:40px;font-size:13.5px;font-weight:500;padding:13px 8px;letter-spacing:.04em}
+  .sticky .s-line{background:var(--line-green);color:#fff}
+  .sticky .s-ig{background:#fff;color:var(--rose-deep);border:1px solid var(--rose);font-weight:400}
+  .sticky .ic{width:17px;height:17px;flex:0 0 auto}
+
+  @media (min-width:600px){
+    body{font-size:16px}
+    .hero h1{font-size:36px}
+    h2.title{font-size:28px}
+    .promise:nth-child(odd),.promise:nth-child(even){margin-left:0;margin-right:0}
+    .flow-imgs img{height:210px}
+  }
+  @media (prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+  a:focus-visible,summary:focus-visible,.btn:focus-visible{outline:2px solid var(--rose-deep);outline-offset:3px}
+</style>
 </head>
 <body>
-    <header class="hero">
-        <video autoplay muted loop playsinline>
-            <source src="toliko2.mp4" type="video/mp4">
-        </video>
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1>toliko</h1>
-            <p class="catchphrase">日常から少し離れる、<br>私だけの癒やし時間</p>
-            <a href="https://lin.ee/W2u6ntw" class="btn">LINEで予約・相談する</a>
+
+<!-- ======================= HERO（看板を背景に） ======================= -->
+<header class="hero">
+  <div class="hero-inner">
+    <h1>いい化粧品なのに、<br>なぜか<span class="accent">変わらない</span>。</h1>
+    <p class="sub">その答えは、肌の“土台”でした。<br>鹿屋・完全個室の、女性専用 肌育サロン。</p>
+    <div class="badges">
+      <span class="badge">完全個室</span>
+      <span class="badge">女性専用</span>
+      <span class="badge">完全予約制</span>
+      <span class="badge">美容歴13年</span>
+    </div>
+    <div class="hero-cta">
+      <a class="btn btn-line" href="https://line.me/R/ti/p/@653fucsk?oat_content=url&ts=02282246">
+        <svg class="ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 5.69 2 10.23c0 4.06 3.55 7.46 8.34 8.1.33.07.77.22.88.5.1.26.07.66.03.92l-.14.85c-.04.26-.2 1.01.89.55s5.85-3.44 7.98-5.9C21.5 13.5 22 11.93 22 10.23 22 5.69 17.52 2 12 2z"/></svg>
+        LINEで初回体験を予約する
+      </a>
+      <p class="cta-note">まずは友だち追加だけでもOK。ご相談から、お気軽に。</p>
+    </div>
+  </div>
+</header>
+
+<!-- ======================= 共感チェック ======================= -->
+<section class="checklist">
+  <div class="wrap">
+    <span class="eyebrow fade">Check</span>
+    <h2 class="title fade">こんなお悩み、ありませんか？</h2>
+    <div class="fade">
+      <div class="check"><span class="mk">✓</span><p>いろいろ試したのに、お肌が変わった気がしない</p></div>
+      <div class="check"><span class="mk">✓</span><p>季節の変わり目に、ゆらいで敏感になりやすい</p></div>
+      <div class="check"><span class="mk">✓</span><p>毛穴や乾燥、ハリ不足が気になりはじめた</p></div>
+      <div class="check"><span class="mk">✓</span><p>家事や育児で、自分のケアはいつも後回し</p></div>
+      <div class="check"><span class="mk">✓</span><p>人目が気になって、お店に通うのをためらってしまう</p></div>
+    </div>
+    <p class="check-foot fade">ひとつでも当てはまった方へ。<br>少しだけ、続きを読んでみてください。</p>
+  </div>
+</section>
+
+<!-- ======================= 原因の再定義 ======================= -->
+<section class="cause">
+  <div class="wrap">
+    <span class="eyebrow fade">Why</span>
+    <h2 class="title fade">それ、肌の“土台”かもしれません。</h2>
+    <div class="fade">
+      <p class="lead">お肌には本来、栄養を“受け取る力”があります。</p>
+      <p>でもその力は、年齢や紫外線、毎日のちょっとした刺激で、少しずつ弱くなっていくと言われています。土台がゆらいでいると、どんなに良いお化粧品を使っても、その良さを十分に受け取れないことがあるのです。</p>
+      <p>だから toliko は、お化粧品を変える前に。<br>まず“受け取れる肌”を、土台から育てることから始めます。これが、わたしたちの考える「肌育」です。</p>
+      <div class="foundation">化粧品を変える前に、受け取る肌へ。</div>
+      <p class="term">＊細胞同士の伝達（インテグリン）に着目した、リアボーテ マーメイドセル トリートメントを使用します。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 3つの約束 ======================= -->
+<section class="promises">
+  <div class="wrap">
+    <span class="eyebrow fade">Promise</span>
+    <h2 class="title fade">toliko、3つの約束</h2>
+    <div class="promise fade"><span class="no">01</span><h3>誰にも会わない、完全個室</h3><p>自宅の一室の、プライベートな空間。人目を気にせず、忙しい毎日をほんの少し忘れて過ごせます。</p></div>
+    <div class="promise fade"><span class="no">02</span><h3>女性専用・女性の手で</h3><p>施術するのは、美容歴13年の女性オーナーひとり。だからこそ、小さなお悩みも安心してご相談いただけます。</p></div>
+    <div class="promise fade"><span class="no">03</span><h3>“治す”より、“育てる”</h3><p>その場限りではなく、土台から整えていく肌育発想。あなたのお肌のペースに、ていねいに寄り添います。</p></div>
+  </div>
+</section>
+
+<!-- ======================= オーナーの想い ======================= -->
+<section class="owner">
+  <div class="wrap">
+    <span class="eyebrow fade">Owner</span>
+    <img class="owner-photo fade" loading="lazy" decoding="async" src="images/owner.jpg" alt="肌育サロン toliko オーナー 野下真紀の施術風景">
+    <div class="fade">
+      <p class="greet">はじめまして。<br>肌育サロン toliko の <b>野下真紀</b> です。</p>
+      <p>福岡の美容専門学校を卒業してから、美容師、脱毛サロン、エステティシャンと、いろんな現場を歩いてきました。気づけば、美容のお仕事は今年で<b>13年目</b>。その中で、わたしがいちばん夢中になれたのが「フェイシャル」でした。</p>
+      <p>ずっと現場で見てきて、確信していることがあります。<b>良いお化粧品と、ちゃんとした使い方さえあれば、お肌は本当に変わる</b>、ということ。お客様から「自分の肌を、好きになれました」と聞くたびに、この仕事をしていてよかったと、心から思います。</p>
+      <div class="name-origin">
+        <span class="l">肌を、育てていきたい。<br>自分の肌を、好きになってほしい。</span>
+        <span class="toliko">toliko<br><span>― その想いから、名づけました ―</span></span>
+      </div>
+      <p>結婚を機に、宮崎から鹿屋へ来ました。今は2人の娘を育てながら、自宅の一室で、おひとりおひとりとゆっくり向き合えるサロンをしています。</p>
+      <p>小さなお悩みでも、大丈夫。<br>あなたの肌と、ていねいに向き合わせてください。</p>
+      <p class="sign">肌育サロン toliko<br><b>野下 真紀</b></p>
+      <p class="prof">宮崎県西都市出身／美容歴13年／2児の母。鹿屋の自宅サロンを拠点に、月1〜2回 宮崎（西都）への出張サロンも予定しています。タイミングの合う方は、お気軽にご相談ください。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 施術の流れ ======================= -->
+<section class="flow">
+  <div class="wrap">
+    <span class="eyebrow fade">Flow</span>
+    <h2 class="title fade">はじめての方へ、当日の流れ</h2>
+    <div class="flow-imgs fade">
+      <img src="images/flow_apply.jpg" alt="丁寧なトリートメントの様子" loading="lazy" decoding="async">
+      <img src="images/flow_pack.jpg" alt="うるおいを届けるパックの様子" loading="lazy" decoding="async">
+    </div>
+    <div class="fade">
+      <div class="step"><span class="n">1</span><div class="c"><h4>カウンセリング</h4><p>今のお肌の状態やお悩みを、ゆっくりお伺いします。気になることは何でもお話しください。</p></div></div>
+      <div class="step"><span class="n">2</span><div class="c"><h4>クレンジング・洗顔</h4><p>メイクや汚れをやさしくオフ。素肌をリセットして、ケアの準備を整えます。</p></div></div>
+      <div class="step"><span class="n">3</span><div class="c"><h4>マーメイドセル トリートメント</h4><p>肌の土台にアプローチ。じっくりとしたお手入れで、心地よい時間をお過ごしください。</p></div></div>
+      <div class="step"><span class="n">4</span><div class="c"><h4>仕上げ</h4><p>うるおいを届けて、お肌を整えます。施術後はメイクをして、そのままお帰りいただけます。</p></div></div>
+      <div class="step"><span class="n">5</span><div class="c"><h4>ホームケアのご相談</h4><p>無理な売り込みはいたしません。今のお肌に合うケアだけを、一緒に考えます。</p></div></div>
+    </div>
+    <p class="flow-note fade">はじめての方も、どうぞ安心してお越しください。</p>
+  </div>
+</section>
+
+<!-- ======================= お客様の声 ======================= -->
+<section class="voices">
+  <div class="wrap">
+    <span class="eyebrow fade">Voice</span>
+    <h2 class="title fade">お客様の声</h2>
+    <!-- ↓実際にいただいた声に差し替えてください（下記はサンプル文／薬機法に配慮した体感ベースの表現） -->
+    <div class="voice fade"><span class="q">“</span><p>何をしても変わらない気がしていたのに、続けるうちに、朝の肌の手ざわりが楽しみになりました。鏡を見るのが好きになっています。</p><p class="who">鹿屋市・40代</p></div>
+    <div class="voice fade"><span class="q">“</span><p>完全個室で、人目を気にせず通えるのが本当にありがたいです。施術中はいつの間にか眠ってしまうほど、ほっとできる時間。</p><p class="who">鹿屋市・30代</p></div>
+    <div class="voice fade"><span class="q">“</span><p>小さな悩みも親身に聞いてくださって、無理にすすめられないので安心。自分の肌を好きになれた気がします。</p><p class="who">鹿屋市・50代</p></div>
+    <p class="voice-disclaimer fade">＊感じ方には個人差があります。／掲載は実際のお客様の声に差し替え予定です。</p>
+  </div>
+</section>
+
+<!-- ======================= メニュー（フェイシャル） ======================= -->
+<section class="menu" id="menu">
+  <div class="wrap">
+    <span class="eyebrow fade">Menu</span>
+    <h2 class="title fade">はじめての方への、肌育プラン</h2>
+    <p class="trial-lead fade">どのメニューも、初回はお試し価格でご用意。<br>まずは“育つ肌”を、1回から体感してください。</p>
+
+    <!-- 主役：マーメイドセル -->
+    <div class="tier feature fade">
+      <span class="ribbon">人気No.1 ／ はじめての方に</span>
+      <img class="tier-img" src="images/mermaid.jpg" loading="lazy" decoding="async" alt="マーメイドセル トリートメントの様子">
+      <div class="tier-body" style="padding-top:24px">
+        <span class="kind">FACIAL ｜ お肌の土台作り</span>
+        <h3>マーメイドセル トリートメント</h3>
+        <p class="fhook">「何をしても変わらなかった」を、もう一度。</p>
+        <p class="desc">いい化粧品が“ちゃんと届く肌”へ。栄養を受け取る土台から育てる、toliko の一番人気です。初めての方は、まずここから。1回でも、お肌の手ざわりの違いを感じていただけます。</p>
+        <p class="price">初回 ¥10,000<span class="was">通常 ¥13,000</span><span class="min2">／90分</span></p>
+        <a class="tier-cta" href="https://line.me/R/ti/p/@653fucsk?oat_content=url&ts=02282246">まずはこれを相談する →</a>
+      </div>
+    </div>
+
+    <!-- お悩み別フェイシャル -->
+    <h3 class="menu-sub fade">お悩みに合わせて、選べるフェイシャル</h3>
+    <div class="fade">
+      <div class="fcard">
+        <img loading="lazy" decoding="async" src="images/brand_rest.jpg" alt="レストセル トリートメント">
+        <div class="fbody">
+          <p class="fhook">ヒリつき・赤み、ゆらぎがちな肌に。</p>
+          <h4>レストセル トリートメント</h4>
+          <p class="fdesc">鎮めて、満たして。敏感に傾いたお肌を、すこやかな安定感へ。季節の変わり目で不安定な方に。</p>
+          <p class="fprice">¥14,000<span class="init">初回 ¥11,000</span><span class="min2">90分</span></p>
         </div>
-    </header>
+      </div>
+      <div class="fcard">
+        <img loading="lazy" decoding="async" src="images/brand_thalasso.jpg" alt="タラソ トリートメント">
+        <div class="fbody">
+          <p class="fhook">乾いてしぼんで見える肌に、海の恵みを。</p>
+          <h4>タラソ トリートメント</h4>
+          <p class="fdesc">内側からふっくら満ちるような、うるおいとハリ。乾燥が気になる季節の、ご褒美ケアに。</p>
+          <p class="fprice">¥15,000<span class="init">初回 ¥12,000</span><span class="min2">90分</span></p>
+        </div>
+      </div>
+      <div class="fcard">
+        <img loading="lazy" decoding="async" src="images/brand_herb.jpg" alt="ハーブ トリートメント">
+        <div class="fbody">
+          <p class="fhook">10回のエステより、1回の集中。</p>
+          <h4>ハーブ トリートメント</h4>
+          <p class="fdesc">お肌が一気に動き出す、特別な日のための本気ケア。生まれ変わるような明るさと、つるんとした手ざわりへ。</p>
+          <p class="fprice">¥11,000〜<span class="min2">90分</span></p>
+        </div>
+      </div>
+      <div class="fcard">
+        <img loading="lazy" decoding="async" src="images/hydro.jpg" alt="ハイドロスプラッシュ">
+        <div class="fbody">
+          <p class="fhook">毛穴、ひと休み。</p>
+          <h4>ハイドロスプラッシュ</h4>
+          <p class="fdesc">詰まりや黒ずみをやさしくオフ。つるんと、きめの整った素肌に。フェイシャルの仕上げにも。</p>
+          <p class="fprice">¥8,000<span class="min2">60分</span></p>
+        </div>
+      </div>
+    </div>
+    <p class="trial-note fade">＊初回価格は、はじめてのご来店時にご利用いただけます。どのメニューが合うか迷ったら、LINEでお気軽にご相談ください。</p>
 
-    <main>
-        <section id="about" class="fade-in">
-            <h2>About</h2>
-            <p>完全個室・女性専用のプライベートサロン。<br>木目と間接照明が織りなす空間で、心と身体を整える特別なひとときを。</p>
-        </section>
-        <section id="menu" class="fade-in">
-            <h2>Menu</h2>
-            <div class="menu-list">
-                <div class="menu-category">Facial</div>
-                <div class="menu-item"><span>マーメイドセルトリートメント(60分)</span><span class="price">¥13,000 初回¥10,000</span></div>
-                <div class="menu-item"><span>ハイドロスプラッシュプレミアム (60分)</span><span class="price">¥8,000</span></div>
-                <div class="menu-category">Body</div>
-                <div class="menu-item"><span>全身オイルマッサージ</span><span class="price">¥8,000 次回予約¥500off</span></div>
-                <div class="menu-category"></div>
-                <div class="menu-item"><span>よもぎ蒸し　1回(30分)</span><span class="price">30分　¥3,500</span></div>
-                <div class="menu-category"></div>
-                <div class="menu-item"><span>よもぎ蒸　　次回予約</span><span class="price">　　¥3,000</span></div>
-                <div class="menu-category"></div>
-                <div class="menu-item"><span>フェイシャルORボディとセット</span><span class="price">¥2,000</span></div>
-                <div class="menu-category"></div>
-                <div class="menu-item"><span>健美草よもぎ蒸し</span><span class="price">上記料金+500</span></div>
-                <div class="menu-category">Eyelash</div>
-                <div class="menu-item"><span>まつ毛パーマ</span><span class="price">¥4,000</span></div>
-                <div class="menu-category"></div>
-                <div class="menu-item"><span>アイシャンプー</span><span class="price">¥500</span></div>
-                <div class="menu-category">Head</div>
-                <div class="menu-item"><span>極上ヘッドマッサージ</span><span class="price">40分　¥4,000</span></div>
-                </div>
-        </section>
-        <section id="gallery" class="fade-in">
-            <h2>Gallery</h2>
-            <div class="gallery-container">
-                <img src="salon-bed.jpg" alt="サロン内装・ベッド">
-            </div>
-        </section>
-    </main>
+    <h3 class="menu-sub fade">Body / Head / Eyelash</h3>
+    <div class="fade">
+      <div class="mrow"><div class="mbody" style="padding-left:0"><div class="mname">全身オイルマッサージ<small>＋マックスボディ ¥1,500</small></div><div class="mprice">¥8,000<small>90分</small></div></div></div>
+      <div class="mrow"><div class="mbody" style="padding-left:0"><div class="mname">極上ヘッドマッサージ<small>＋ハイドロ ¥2,000／ローション ¥1,500</small></div><div class="mprice">¥4,000<small>40分</small></div></div></div>
+      <div class="mrow"><div class="mbody" style="padding-left:0"><div class="mname">まつ毛パーマ<small>すっぴんでも、目もとに自信を</small></div><div class="mprice">¥4,000</div></div></div>
+    </div>
 
-    <a href="https://www.instagram.com/hadaiku_toliko" class="insta-fixed-btn" target="_blank" rel="noopener noreferrer">Instagram</a>
+    <div class="yomogi fade">
+      <span class="tag">温活 × 肌育</span>
+      <h3>よもぎ蒸し</h3>
+      <p class="desc">古くから親しまれてきたよもぎの蒸気で、体の芯までじんわり。冷えやむくみ、こわばりが気になる毎日に、ほっとひと息つく温活の時間を。</p>
+      <p class="y-prices">1回（30分） <b>¥3,500</b> ／ 次回予約 <b>¥3,000</b><br>フェイシャル・ボディとセット <b>¥2,000</b> ／ 健美草よもぎ蒸し ＋¥500</p>
+    </div>
+  </div>
+</section>
 
-    <script>
-        window.addEventListener("scroll", () => {
-            document.querySelectorAll('.fade-in').forEach(el => {
-                if (el.getBoundingClientRect().top < window.innerHeight * 0.8) {
-                    el.classList.add('active');
-                }
-            });
-        });
-    </script>
+<!-- ======================= FAQ ======================= -->
+<section class="faq">
+  <div class="wrap">
+    <span class="eyebrow fade">FAQ</span>
+    <h2 class="title fade">よくあるご質問</h2>
+    <div class="fade">
+      <details><summary>しつこく勧誘されませんか？</summary><div class="a">いたしません。今のお肌に必要なことだけを、正直にお伝えします。化粧品なども、ご希望があればご紹介する程度ですのでご安心ください。</div></details>
+      <details><summary>おひとりで運営されていますか？</summary><div class="a">はい。美容歴13年のオーナーがひとりで、おひとりずつ担当します。だからこそ、あなたのお肌をじっくり見守れます。</div></details>
+      <details><summary>痛みはありますか？</summary><div class="a">心地よさを大切にしたお手入れです。施術中に眠ってしまう方も多くいらっしゃいます。気になる点は遠慮なくお声がけください。</div></details>
+      <details><summary>施術後、メイクをして帰れますか？</summary><div class="a">はい、お仕上げまで整えてお見送りします。そのままお出かけいただけます。</div></details>
+      <details><summary>予約・支払い方法は？</summary><div class="a">完全予約制です。ご予約・ご相談は公式LINE、またはInstagramのDMから承っています。お支払い方法はご予約時にご案内します。</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= サロン情報（マップなし） ======================= -->
+<section class="access">
+  <div class="wrap">
+    <span class="eyebrow fade">Information</span>
+    <h2 class="title fade">サロン情報</h2>
+    <div class="fade">
+      <div class="info-row"><div class="k">店名</div><div class="v">肌育サロン toliko</div></div>
+      <div class="info-row"><div class="k">エリア</div><div class="v">鹿児島県 鹿屋市（自宅サロン）</div></div>
+      <div class="info-row"><div class="k">営業時間</div><div class="v">9:30 〜 16:30</div></div>
+      <div class="info-row"><div class="k">店休日</div><div class="v">日・祝</div></div>
+      <div class="info-row"><div class="k">ご予約</div><div class="v">完全予約制／公式LINE・Instagram DM</div></div>
+      <div class="info-row"><div class="k">出張</div><div class="v">月1〜2回、宮崎（西都）への出張サロンも予定</div></div>
+    </div>
+    <p class="access-note fade">＊プライバシーに配慮した自宅サロンのため、詳しい住所はご予約時に個別でご案内しています。安心してお越しください。</p>
+  </div>
+</section>
+
+<!-- ======================= 最後のCTA ======================= -->
+<section class="final">
+  <div class="wrap">
+    <h2 class="fade">鹿屋で、肌の土台から。</h2>
+    <p class="fade">まずはLINEから、お気軽に。<br>ご相談だけでも、もちろん大丈夫です。</p>
+    <div class="fade">
+      <a class="btn btn-line" href="https://line.me/R/ti/p/@653fucsk?oat_content=url&ts=02282246">
+        <svg class="ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 5.69 2 10.23c0 4.06 3.55 7.46 8.34 8.1.33.07.77.22.88.5.1.26.07.66.03.92l-.14.85c-.04.26-.2 1.01.89.55s5.85-3.44 7.98-5.9C21.5 13.5 22 11.93 22 10.23 22 5.69 17.52 2 12 2z"/></svg>
+        LINEで初回体験を予約する
+      </a>
+      <a class="btn btn-ig" href="https://www.instagram.com/hadaiku_toliko/">Instagramを見る・DMで相談する</a>
+      <p class="cta-note">＊効果や感じ方には個人差があります。</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="flogo">toliko</div>
+  肌育サロン toliko ／ 鹿児島県鹿屋市<br>
+  OPEN 9:30〜16:30 ／ 店休日 日・祝 ／ 完全予約制
+  <p class="disc">掲載のメニュー・価格は変更になる場合があります。施術の感じ方には個人差があり、効果を保証するものではありません。</p>
+</footer>
+
+<nav class="sticky" aria-label="予約">
+  <a class="s-line" href="https://line.me/R/ti/p/@653fucsk?oat_content=url&ts=02282246">
+    <svg class="ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 5.69 2 10.23c0 4.06 3.55 7.46 8.34 8.1.33.07.77.22.88.5.1.26.07.66.03.92l-.14.85c-.04.26-.2 1.01.89.55s5.85-3.44 7.98-5.9C21.5 13.5 22 11.93 22 10.23 22 5.69 17.52 2 12 2z"/></svg>
+    LINEで予約
+  </a>
+  <a class="s-ig" href="https://www.instagram.com/hadaiku_toliko/">
+    <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+    Instagram
+  </a>
+</nav>
+
+<script>
+  (function(){
+    var els=document.querySelectorAll('.fade');
+    if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+    var io=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}})},{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){io.observe(e)});
+  })();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BeautySalon",
+  "name":"肌育サロン toliko",
+  "description":"鹿屋市の完全個室・女性専用エステ。肌の土台から育てる肌育サロン。マーメイドセル トリートメント取り扱い。",
+  "areaServed":"鹿児島県鹿屋市",
+  "address":{"@type":"PostalAddress","addressRegion":"鹿児島県","addressLocality":"鹿屋市","addressCountry":"JP"},
+  "openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"09:30","closes":"16:00"}],
+  "priceRange":"¥¥",
+  "sameAs":["https://www.instagram.com/hadaiku_toliko/","https://line.me/R/ti/p/@653fucsk?oat_content=url&ts=02282246"]
+}
+</script>
+
 </body>
 </html>
